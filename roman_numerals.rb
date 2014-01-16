@@ -1,3 +1,7 @@
 def convert(numeral)
-	numeral == "V" ? 5 : numeral.length
+	ones = numeral.scan(/I/).length
+	fives = numeral.scan(/V/).length
+	tens = numeral.scan(/X/).length
+
+	total = (fives > 0) ? 10 * tens + 5 - ones : 10 * tens + ones   
 end
