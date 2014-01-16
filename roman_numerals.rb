@@ -4,7 +4,7 @@ def convert(numeral)
 	negative_ones = numeral.scan(/I[VX]/).length
 	negative_tens = numeral.scan(/X[LC]/).length
 
-	ones *= (-1) if negative_ones != 0
-	tens *= (-1) if negative_tens != 0
-	(100*hundreds) + (50*fiftys) + (10*tens) + (5*fives) + ones
+	total = (100*hundreds) + (50*fiftys) + (10*tens) + (5*fives) + ones
+	total = (negative_ones != 0) ? total -2 : total
+	total = (negative_tens != 0) ? total -20 : total
 end
