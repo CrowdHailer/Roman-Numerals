@@ -12,4 +12,8 @@ describe 'Roman numeral application' do
 	it "Should return 5 when given 'V'" do
 		expect(convert("V")).to eq(5)
 	end
+
+	it "Should return 10 when given 'X'" do
+		expect(convert("X")).to eq(10)
+	end
 end
