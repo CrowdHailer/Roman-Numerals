@@ -32,10 +32,24 @@ describe 'Roman numeral application' do
 	it "Should return 11 when given 'XI'" do
 		expect(convert("XI")).to eq(11)
 	end
+	
 	it "Should return 15 when given 'XV'" do
 		expect(convert("XV")).to eq(15)
 	end
+	
 	it "Should return 14 when given 'XIV'" do
 		expect(convert("XIV")).to eq(14)
+	end
+
+	it "Should return 19 when given 'XIX'" do
+		expect(convert("XIX")).to eq(19)
+	end
+
+	it "Should return 50 when given 'L'" do
+		expect(convert("L")).to eq(50)
+	end
+
+	it "Should return 40 when given 'XL'" do
+		expect(convert("XL")).to eq(40)
 	end
 end
