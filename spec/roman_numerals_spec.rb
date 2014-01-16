@@ -57,4 +57,8 @@ describe 'Roman numeral application' do
 		expect(convert("XC")).to eq(90)
 	end
 
+	it "Should return 149 when given 'CXLIX'" do
+		expect(convert("CXLIX")).to eq(149)
+	end
+
 end
