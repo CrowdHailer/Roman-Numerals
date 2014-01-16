@@ -61,4 +61,12 @@ describe 'Roman numeral application' do
 		expect(convert("CXLIX")).to eq(149)
 	end
 
+	it "Should return 300 when given 'CCC'" do
+		expect(convert("CCC")).to eq(300)
+	end
+
+	it "Should return 400 when given 'CD'" do
+		expect(convert("CD")).to eq(400)
+	end
+
 end
