@@ -3,5 +3,6 @@ def convert(numeral)
 	fives = numeral.scan(/V/).length
 	tens = numeral.scan(/X/).length
 
-	total = (fives > 0) ? 10 * tens + 5 - ones : 10 * tens + ones   
+	return 5 - ones if numeral == "IV"
+	return (10*tens) + (5*fives) + ones
 end
