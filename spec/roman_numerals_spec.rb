@@ -6,6 +6,6 @@ describe 'Roman numeral application' do
 	end
 
 	it "Should return 2 when given 'II'" do
-		expect(convert("II")).to eg(2)
+		expect(convert("II")).to eq(2)
 	end
 end

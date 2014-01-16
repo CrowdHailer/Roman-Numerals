@@ -1,3 +1,3 @@
 def convert(numeral)
-	1
+	numeral.length
 end
