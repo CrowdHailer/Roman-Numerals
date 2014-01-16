@@ -4,4 +4,8 @@ describe 'Roman numeral application' do
 	it "Should return 1 when given 'I'" do
 		expect(convert("I")).to eq(1)
 	end
+
+	it "Should return 2 when given 'II'" do
+		expect(convert("II")).to eg(2)
+	end
 end
