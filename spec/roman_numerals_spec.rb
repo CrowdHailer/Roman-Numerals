@@ -52,4 +52,9 @@ describe 'Roman numeral application' do
 	it "Should return 40 when given 'XL'" do
 		expect(convert("XL")).to eq(40)
 	end
+
+	it "Should return 90 when given 'XC'" do
+		expect(convert("XC")).to eq(90)
+	end
+
 end
