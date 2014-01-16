@@ -2,8 +2,8 @@ def convert(numeral)
 	ones = numeral.scan(/I/).length
 	fives = numeral.scan(/V/).length
 	tens = numeral.scan(/X/).length
+	negative_ones = numeral.scan(/I[VX]/).length
 
-	return 5 * fives - ones if numeral == "IV"
-	return 10 * tens - ones if numeral == "IX"
-	return (10*tens) + (5*fives) + ones
+	ones *= (-1) if negative_ones != 0
+	(10*tens) + (5*fives) + ones
 end
