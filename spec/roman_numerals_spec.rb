@@ -35,4 +35,7 @@ describe 'Roman numeral application' do
 	it "Should return 15 when given 'XV'" do
 		expect(convert("XV")).to eq(15)
 	end
+	it "Should return 14 when given 'XIV'" do
+		expect(convert("XIV")).to eq(14)
+	end
 end
