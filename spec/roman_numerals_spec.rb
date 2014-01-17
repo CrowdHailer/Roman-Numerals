@@ -69,4 +69,7 @@ describe 'Roman numeral application' do
 		expect(convert("CD")).to eq(400)
 	end
 
+	it "Should return 900 when given 'CM'" do
+		expect(convert("CM")).to eq(900)
+	end
 end
