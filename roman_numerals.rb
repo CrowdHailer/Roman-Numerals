@@ -12,22 +12,22 @@ class Roman
 	end
 
 	def numeral
-		string = tens((value/10) % 10)
-		string += units(value % 10)
+		orders = ["IVX", "XLC"]
+		final = ""
+		local_value = self.value
+		orders.each do |chars|
+			a,b,c = chars.split("")
+			final = units(local_value % 10, a, b, c) + final
+			local_value = local_value/10
 
+		end
+		final
 	end
 
-	def tens number
-		return "XL" if number == 4
-		return "XC" if number == 9
-		"L" * (number/5) + "X" * (number % 5) 
-	end
-
-	def units number
-		# limit 0 - 9
-		return "IV" if number == 4
-		return "IX" if number == 9
-		"V" * (number/5) + "I" * (number % 5)
+	def units(number, ones, fives, tens)
+		return ones+fives if number == 4
+		return ones+tens if number == 9
+		fives * (number/5) + ones * (number % 5)
 	end
 
 end
