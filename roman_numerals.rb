@@ -24,31 +24,16 @@ class Roman
 	end
 
 	def numeral
-		# answer = 0
-		# roman_numerals.each_pair do |k,v|
-		# 	if v == value
-		# 		answer = k
-			
-		# 	end
-		# end
-		# answer
+
 		string = ""
-		string << "X" * (value/10)
+		string += (value % 10 != 9) ? "X" * (value/10) : "X" * ((value/10) -1)
 		string << "I" if value % 5 == 4
-		string << "V" if value % 10 >= 4
+		string << "V" if value % 10 <= 8 && value % 10 >= 4
+		string << "X" if value % 10 == 9
 		ones = value % 5
 		string << "I" * ones if [0,1,2,3].include?(ones)
 		string
 
-		# return "IV" if value == 4
-
-		# if value % 5 == 0
-		# 	"V"
-		# elsif value % 5 == 1
-		# 	"V"*(value/5) + "I"
-		# else
-		# 	"V"*(value/5) + "II"
-		# end
 
 	end
 

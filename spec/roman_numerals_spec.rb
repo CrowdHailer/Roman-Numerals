@@ -48,4 +48,24 @@ describe Roman do
 		roman = Roman.new(10)
 		expect(roman.numeral).to eq("X")
 	end
+
+	it "should return XVIII on representation 18" do
+		roman = Roman.new(18)
+		expect(roman.numeral).to eq("XVIII")
+	end
+
+	it "should return XX on representation 20" do
+		roman = Roman.new(20)
+		expect(roman.numeral).to eq("XX")
+	end
+
+	it "should return XXV on representation 25" do
+		roman = Roman.new(25)
+		expect(roman.numeral).to eq("XXV")
+	end
+
+	it "should return XIX on representation 29" do
+		roman = Roman.new(29)
+		expect(roman.numeral).to eq("XIX")
+	end
 end
