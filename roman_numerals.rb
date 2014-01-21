@@ -25,16 +25,26 @@ class Roman
 
 	def numeral
 
-		string = ""
-		string += (value % 10 != 9) ? "X" * (value/10) : "X" * ((value/10) -1)
-		string << "I" if value % 5 == 4
-		string << "V" if value % 10 <= 8 && value % 10 >= 4
-		string << "X" if value % 10 == 9
-		ones = value % 5
-		string << "I" * ones if [0,1,2,3].include?(ones)
-		string
+		# string = ""
+		# string += (value % 10 != 9) ? "X" * (value/10) : "X" * ((value/10) -1)
+		# string << "I" if value % 5 == 4
+		# string << "V" if value % 10 <= 8 && value % 10 >= 4
+		# string << "X" if value % 10 == 9
+		# ones = value % 5
+		# string << "I" * ones if [0,1,2,3].include?(ones)
+		# string
+
+		string = (value % 10 != 9) ? "X" * (value/10) : "X" * ((value/10) -1)
+		string += units(value % 10)
 
 
+	end
+
+	def units number
+		# limit 0 - 9
+		return "IV" if number == 4
+		return "IX" if number == 9
+		"V" * (number/5) + "I" * (number % 5)
 	end
 
 end
