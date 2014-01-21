@@ -10,6 +10,16 @@ describe Roman do
 		expect(Roman.new(2).value).to eq(2)		
 	end
 
+	it "should represent 1 given I" do
+		roman = Roman.new("I")
+		expect(roman.value).to eq(1)
+	end
+
+	it "should represent 2 given II" do
+		roman = Roman.new("II")
+		expect(roman.value).to eq(2)
+	end
+
 	it "should return I when given 1" do
 		expect(Roman.new(1).numeral).to eq("I")		
 	end
@@ -22,16 +32,6 @@ describe Roman do
 	it "should return V when object given 5" do
 		roman = Roman.new(5)
 		expect(roman.numeral).to eq("V")		
-	end
-
-	it "should represent 1 given I" do
-		roman = Roman.new("I")
-		expect(roman.value).to eq(1)
-	end
-
-	it "should represent 2 given II" do
-		roman = Roman.new("II")
-		expect(roman.value).to eq(2)
 	end
 
 	it "should return IV on representation 4" do
