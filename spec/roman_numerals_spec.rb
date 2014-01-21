@@ -78,4 +78,9 @@ describe Roman do
 		roman = Roman.new(49)
 		expect(roman.numeral).to eq("XLIX")
 	end
+
+	it "should return LI on representation 51" do
+		roman = Roman.new(51)
+		expect(roman.numeral).to eq("LI")
+	end
 end

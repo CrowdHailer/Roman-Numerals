@@ -19,7 +19,7 @@ class Roman
 
 	def tens number
 		return "XL" if number == 4
-		return "X" * number
+		"L" * (number/5) + "X" * (number % 5) 
 	end
 
 	def units number
