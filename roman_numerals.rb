@@ -12,9 +12,14 @@ class Roman
 	end
 
 	def numeral
-		string = "X" * (value/10)
+		string = tens((value/10) % 10)
 		string += units(value % 10)
 
+	end
+
+	def tens number
+		return "XL" if number == 4
+		return "X" * number
 	end
 
 	def units number
