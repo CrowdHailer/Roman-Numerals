@@ -98,4 +98,14 @@ describe Roman do
 		roman = Roman.new(301)
 		expect(roman.numeral).to eq("CCCI")
 	end
+
+	it "should return CMXCVII on representation 997" do
+		roman = Roman.new(997)
+		expect(roman.numeral).to eq("CMXCVII")
+	end
+
+	it "should return M on representation 1000" do
+		roman = Roman.new(1000)
+		expect(roman.numeral).to eq("M")
+	end
 end

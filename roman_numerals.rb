@@ -21,7 +21,7 @@ class Roman
 			local_value = local_value/10
 
 		end
-		final
+		"M" * local_value + final
 	end
 
 	def units(number, ones, fives, tens)
