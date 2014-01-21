@@ -24,4 +24,13 @@ describe Roman do
 		expect(roman.numeral).to eq("V")		
 	end
 
+	it "should represent 1 given I" do
+		roman = Roman.new("I")
+		expect(roman.value).to eq(1)
+	end
+
+	it "should represent 2 given II" do
+		roman = Roman.new("II")
+		expect(roman.value).to eq(2)
+	end
 end
