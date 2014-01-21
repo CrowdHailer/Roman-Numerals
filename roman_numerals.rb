@@ -19,6 +19,7 @@ class Roman
 
 	def tens number
 		return "XL" if number == 4
+		return "XC" if number == 9
 		"L" * (number/5) + "X" * (number % 5) 
 	end
 
