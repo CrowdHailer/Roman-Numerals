@@ -93,4 +93,9 @@ describe Roman do
 		roman = Roman.new(91)
 		expect(roman.numeral).to eq("XCI")
 	end
+
+	it "should return CCCI on representation 301" do
+		roman = Roman.new(301)
+		expect(roman.numeral).to eq("CCCI")
+	end
 end

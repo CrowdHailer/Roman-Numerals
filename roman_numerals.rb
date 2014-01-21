@@ -12,7 +12,7 @@ class Roman
 	end
 
 	def numeral
-		orders = ["IVX", "XLC"]
+		orders = ["IVX", "XLC", "CVM"]
 		final = ""
 		local_value = self.value
 		orders.each do |chars|
