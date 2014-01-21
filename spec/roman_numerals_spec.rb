@@ -33,4 +33,19 @@ describe Roman do
 		roman = Roman.new("II")
 		expect(roman.value).to eq(2)
 	end
+
+	it "should return IV on representation 4" do
+		roman = Roman.new(4)
+		expect(roman.numeral).to eq("IV")
+	end
+
+	it "should return VI on representation 6" do
+		roman = Roman.new(6)
+		expect(roman.numeral).to eq("VI")
+	end
+
+	it "should return X on representation 10" do
+		roman = Roman.new(10)
+		expect(roman.numeral).to eq("X")
+	end
 end
