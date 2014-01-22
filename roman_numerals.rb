@@ -3,8 +3,8 @@ class Roman
 		if value.class == Fixnum
 			@value = value
 		else
-			occurances = [/I/,/V/,/X/,/L/,/C/,/I[VX]/]
-			effect = [1,5,10,50,100,-2]
+			occurances = [/I/,/V/,/X/,/L/,/C/,/D/,/M/,/I[VX]/,/X[LC]/,/C[VM]/]
+			effect = [1,5,10,50,100,500,1000,-2,-20,-200]
 			total = []
 			(0..effect.length-1).each{|i| total[i] = value.scan(occurances[i]).count * effect[i]}
 
@@ -17,7 +17,7 @@ class Roman
 	end
 
 	def numeral
-		orders = ["IVX", "XLC", "CVM"]
+		orders = ["IVX", "XLC", "CDM"]
 		final = ""
 		local_value = self.value
 		orders.each do |chars|

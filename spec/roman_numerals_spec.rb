@@ -34,8 +34,20 @@ describe Roman do
 		expect(Roman.new("L").value).to eq(50)		
 	end
 
+	it "should represent the number 99 given XCIX" do
+		expect(Roman.new("XCIX").value).to eq(99)		
+	end
+
 	it "should represent the number 100 given C" do
 		expect(Roman.new("C").value).to eq(100)		
+	end
+
+	it "should represent the number 500 given D" do
+		expect(Roman.new("D").value).to eq(500)		
+	end
+
+	it "should represent the number 4999 given MMMMCMXCIX" do
+		expect(Roman.new("MMMMCMXCIX").value).to eq(4999)		
 	end
 
 	it "should represent 1 given I" do
@@ -130,6 +142,11 @@ describe Roman do
 	it "should return CMXCVII on representation 997" do
 		roman = Roman.new(997)
 		expect(roman.numeral).to eq("CMXCVII")
+	end
+
+	it "should return D on representation 500" do
+		roman = Roman.new(500)
+		expect(roman.numeral).to eq("D")
 	end
 
 	it "should return M on representation 1000" do
