@@ -3,8 +3,8 @@ class Roman
 		if value.class == Fixnum
 			@value = value
 		else
-			occurances = [/I/,/V/,/X/,/I[VX]/]
-			effect = [1,5,10,-2]
+			occurances = [/I/,/V/,/X/,/L/,/C/,/I[VX]/]
+			effect = [1,5,10,50,100,-2]
 			total = []
 			(0..effect.length-1).each{|i| total[i] = value.scan(occurances[i]).count * effect[i]}
 
