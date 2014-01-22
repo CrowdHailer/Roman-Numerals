@@ -9,6 +9,9 @@ describe Roman do
 	it "should represent the number 2 given 2" do
 		expect(Roman.new(2).value).to eq(2)		
 	end
+	it "should represent the number 5 given V" do
+		expect(Roman.new("V").value).to eq(5)		
+	end
 
 	it "should represent 1 given I" do
 		roman = Roman.new("I")
@@ -107,5 +110,10 @@ describe Roman do
 	it "should return M on representation 1000" do
 		roman = Roman.new(1000)
 		expect(roman.numeral).to eq("M")
+	end
+
+	it "should return MMMMCM on representation 4900" do
+		roman = Roman.new(4900)
+		expect(roman.numeral).to eq("MMMMCM")
 	end
 end

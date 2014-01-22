@@ -3,7 +3,9 @@ class Roman
 		if value.class == Fixnum
 			@value = value
 		else
-			@value = value.length
+			ones = value.scan(/I/).count
+			fives = value.scan(/V/).count
+			@value = 5 * fives + ones
 		end
 	end
 
