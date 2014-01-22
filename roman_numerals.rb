@@ -8,7 +8,7 @@ class Roman
 			total = []
 			(0..effect.length-1).each{|i| total[i] = value.scan(occurances[i]).count * effect[i]}
 
-			@value = total.inject(0, :+)
+			@value = (0..effect.length-1).inject(0){|t, i| t + value.scan(occurances[i]).count*effect[i]}
 		end
 	end
 
