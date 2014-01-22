@@ -3,11 +3,12 @@ class Roman
 		if value.class == Fixnum
 			@value = value
 		else
-			ones = value.scan(/I/).count
-			fives = value.scan(/V/).count
-			tens = value.scan(/X/).count
-			minus_ones = value.scan(/IV/).count
-			@value = 10 * tens + 5 * fives + ones - 2 * minus_ones
+			occurances = [/I/,/V/,/X/,/I[VX]/]
+			effect = [1,5,10,-2]
+			total = []
+			(0..effect.length-1).each{|i| total[i] = value.scan(occurances[i]).count * effect[i]}
+
+			@value = total.inject(0, :+)
 		end
 	end
 

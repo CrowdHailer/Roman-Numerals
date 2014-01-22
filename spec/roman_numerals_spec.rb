@@ -18,6 +18,10 @@ describe Roman do
 		expect(Roman.new("V").value).to eq(5)		
 	end
 
+	it "should represent the number 9 given IX" do
+		expect(Roman.new("IX").value).to eq(9)		
+	end
+
 	it "should represent the number 10 given X" do
 		expect(Roman.new("X").value).to eq(10)		
 	end
