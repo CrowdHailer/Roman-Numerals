@@ -5,7 +5,9 @@ class Roman
 		else
 			ones = value.scan(/I/).count
 			fives = value.scan(/V/).count
-			@value = 5 * fives + ones
+			tens = value.scan(/X/).count
+			minus_ones = value.scan(/IV/).count
+			@value = 10 * tens + 5 * fives + ones - 2 * minus_ones
 		end
 	end
 

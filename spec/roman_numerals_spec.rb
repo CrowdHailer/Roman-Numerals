@@ -9,8 +9,17 @@ describe Roman do
 	it "should represent the number 2 given 2" do
 		expect(Roman.new(2).value).to eq(2)		
 	end
+
+	it "should represent the number 4 given IV" do
+		expect(Roman.new("IV").value).to eq(4)		
+	end
+
 	it "should represent the number 5 given V" do
 		expect(Roman.new("V").value).to eq(5)		
+	end
+
+	it "should represent the number 10 given X" do
+		expect(Roman.new("X").value).to eq(10)		
 	end
 
 	it "should represent 1 given I" do
